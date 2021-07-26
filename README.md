@@ -1,13 +1,21 @@
 # wefox Frontend Challenge
 
-**This project is a template for the challenge, you can change all the files you consider change**, it was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+MARINA BENÍTEZ SÁNCHEZ 
+
+
+
+**This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Pre-requisites
 - Docker
 - Git
 
 ## What we want
-Open a repo in Github/GitLab/Bitbucket (send it to us, so we can see the progress) and build a dummy app that:
+
+
+build a dummy app that:
 
 ### Required
 - Runs locally the API using docker-compose (you've available the config on `docker-compose.yml` file)
