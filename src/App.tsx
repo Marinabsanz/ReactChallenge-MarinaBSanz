@@ -11,7 +11,7 @@ function App() {
           Hello World . I'm Marina and I'm Starting a new project 
           </p>
         <a
-          className="App-link"
+         
           href="https://github.com/MarinaBsanz"
           target="_blank"
           rel="noopener noreferrer"
