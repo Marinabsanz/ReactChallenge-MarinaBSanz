@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+       
         <p>
-          Hello World . I'm Marina and I'm Starting a new project
+          Hello World . I'm Marina and I'm Starting a new project 
           </p>
         <a
           className="App-link"
@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          More info about me
         </a>
       </header>
     </div>
