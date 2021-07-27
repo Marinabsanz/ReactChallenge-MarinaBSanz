@@ -4,13 +4,9 @@
 @import './layout/variables.scss';
 
 
+
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('../images/favicon.ico');
-    background-repeat: no-repeat;
-    text-decoration: none;
-    list-style: none;
+
     background-color: $colorbackground;
     font-family: $font-family;
 }
