@@ -10,7 +10,7 @@ export interface ItemPageSP {
     error: string
 }
 export interface ItemPageDP {
-    fetchItem: (id: string)=>void
+    fetchItem: (id: string,)=>void
 }
 interface Props extends ItemPageDP, ItemPageSP {
     match: {
@@ -27,7 +27,7 @@ export class ItemPage extends React.Component<Props> {
         this.props.fetchItem(this.props.match.params.id);
     }
     goHome() {
-        history.push("/App.tsx" );
+        history.push("/App" );
     }
     render(){
         const show = !this.props.loading && !this.props.error && this.props.item;
@@ -37,10 +37,13 @@ export class ItemPage extends React.Component<Props> {
                 {this.props.error && <div>{this.props.error}</div> }
                 {show &&
                 <div>
-                  <div>City number :{this.props.item.id}</div>
+                  {/* <div>City number :{this.props.item.id}</div> */}
                   <div>City : {this.props.item.title}</div>
-                  <div>Description: {this.props.item.content}</div>
+                  <div>{this.props.item.content}</div>
+                  <div> Lattitude: </div>
+                  <div> Image: </div> 
                 </div>
+                
                 }
                 <button onClick={this.goHome}>Go back!</button>
             </div>

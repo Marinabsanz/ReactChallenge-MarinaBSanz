@@ -10,13 +10,15 @@ export interface ListPageSP {
 }
 export interface ListPageDP {
     fetchItems: ()=>void,
-    addItem: (title: string, description: string)=>void
+    addItem: (title: string, content: string )=>void
 }
 interface Props extends ListPageDP, ListPageSP {}
 
 interface State {
     title: string,
-    description: string
+    content: string,
+
+  
 }
 export class ListPage extends React.Component<Props, State> {
 
@@ -24,7 +26,9 @@ export class ListPage extends React.Component<Props, State> {
         super(props);
         this.state = {
             title: "",
-            description: ""
+            content: "",
+            
+          
         };
         this.props.fetchItems();
     }
@@ -36,17 +40,24 @@ export class ListPage extends React.Component<Props, State> {
     }
     changeDescription(event: any) {
         this.setState({
-            description: event.target.value
+            content: event.target.value
         })
     }
+
+
+ 
+
     addItem() {
-        const {title, description} = this.state
-        if(!title || !description) alert("fill all the labels!");
+        const {title, content} = this.state
+        if(!title || !content) alert("fill all the labels!");
         else {
-            this.props.addItem(title, description);
+            this.props.addItem(title, content,);
             this.setState({
                 title: "",
-                description: ""
+                content: "",
+                
+                
+                
             })
         }
     }
@@ -69,10 +80,12 @@ export class ListPage extends React.Component<Props, State> {
                   </ul>
                   <div>
                     Add a new city:
-                    <div>City name <input type="text" value={this.state.title} onChange={this.changeTitle.bind(this)}/></div>
-                    <div>Description: <input type="text" value={this.state.description} onChange={this.changeDescription.bind(this)}/></div>
+                    <div>City name <input type="text" value={this.state.title} placeholder= "Example:Seville" onChange={this.changeTitle.bind(this)}/></div>
+                    <div>Description: <input type="text" value={this.state.content} placeholder= "Write about the city" onChange={this.changeDescription.bind(this)}/></div>
+                   
                     <button onClick={this.addItem.bind(this)}>add!</button>
                   </div>
+                  
                 </React.Fragment>
 
                 }

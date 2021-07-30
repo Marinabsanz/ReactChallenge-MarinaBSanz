@@ -1,4 +1,6 @@
 .item-page {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+ background-color: rgb(250, 233, 210); 
+   font-size: 1rem;}

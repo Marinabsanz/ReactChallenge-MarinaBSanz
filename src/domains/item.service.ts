@@ -13,10 +13,14 @@ export class ItemService {
         const response = await axios.get(API +"/" + id);
         return response.data ? Item.FromBackend(response.data) : null;
     }
-    static async addItem(title: string, description: string): Promise<Item[]> {
+    static async addItem(title: string, content: string  ): Promise<Item[]> {
         const response = await axios.post(API +"/", {
             title,
-            description
+            content,
+           
+            
+            
+        
         });
         return response.data.map((item: any) => Item.FromBackend(item))
     }

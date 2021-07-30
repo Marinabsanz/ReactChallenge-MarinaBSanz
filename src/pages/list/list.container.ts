@@ -17,8 +17,8 @@ function mapDispatchToProps(dispatch: Dispatch<IAction>): ListPageDP {
             fetchItems(dispatch)
                 .then(dispatch);
         },
-        addItem: (title: string, description: string)=>{
-            addItem(title, description)
+        addItem: (title: string, content: string, )=>{
+            addItem(title, content, )
                 .then(dispatch)
         }
     }
