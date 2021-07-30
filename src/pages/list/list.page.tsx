@@ -41,7 +41,7 @@ export class ListPage extends React.Component<Props, State> {
     }
     addItem() {
         const {title, description} = this.state
-        if(!title || !description) alert("please fill some data!");
+        if(!title || !description) alert("fill all the labels!");
         else {
             this.props.addItem(title, description);
             this.setState({
@@ -68,8 +68,8 @@ export class ListPage extends React.Component<Props, State> {
                       })}
                   </ul>
                   <div>
-                    Add Item:
-                    <div>Title: <input type="text" value={this.state.title} onChange={this.changeTitle.bind(this)}/></div>
+                    Add a new city:
+                    <div>Ciy name <input type="text" value={this.state.title} onChange={this.changeTitle.bind(this)}/></div>
                     <div>Description: <input type="text" value={this.state.description} onChange={this.changeDescription.bind(this)}/></div>
                     <button onClick={this.addItem.bind(this)}>add!</button>
                   </div>

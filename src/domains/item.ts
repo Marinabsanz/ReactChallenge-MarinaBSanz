@@ -11,7 +11,7 @@ export class Item {
         return new Item(
             data.id,
             data.title,
-            data.content
+            data.content,
         )
     }
 
