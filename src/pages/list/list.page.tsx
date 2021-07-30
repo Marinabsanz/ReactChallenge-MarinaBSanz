@@ -69,7 +69,7 @@ export class ListPage extends React.Component<Props, State> {
                   </ul>
                   <div>
                     Add a new city:
-                    <div>Ciy name <input type="text" value={this.state.title} onChange={this.changeTitle.bind(this)}/></div>
+                    <div>City name <input type="text" value={this.state.title} onChange={this.changeTitle.bind(this)}/></div>
                     <div>Description: <input type="text" value={this.state.description} onChange={this.changeDescription.bind(this)}/></div>
                     <button onClick={this.addItem.bind(this)}>add!</button>
                   </div>

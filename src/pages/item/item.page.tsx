@@ -37,8 +37,8 @@ export class ItemPage extends React.Component<Props> {
                 {this.props.error && <div>{this.props.error}</div> }
                 {show &&
                 <div>
-                  <div>City number {this.props.item.id}</div>
-                  <div>City {this.props.item.title}</div>
+                  <div>City number :{this.props.item.id}</div>
+                  <div>City : {this.props.item.title}</div>
                   <div>Description: {this.props.item.content}</div>
                 </div>
                 }
