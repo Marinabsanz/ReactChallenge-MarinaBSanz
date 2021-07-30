@@ -1,12 +1,21 @@
-# REACT - REDUX - TS - DEMO
 
-#### This repo is a small working example of a React-Redux app with Typescript. Can be used:
-- As a starter for own project
-- To learn the basics of React-Redux
-- To start with Typescript
+WEFOX CHALLENGE TEST JUNIOR
 
-This repo includes a simple `express` server, in order to have a fully functional example.
-This example was build using [TypeScript-React-Starter](https://github.com/Microsoft/TypeScript-React-Starter)
+First project using typescript+React
+App/BLog to know info about differents cities 
+
+
+
+Marina Benítez Sánchez
+
+
+
+
+
+
+This project was build using [TypeScript-React-Starter](https://github.com/Microsoft/TypeScript-React-Starter)
+
+
 
 1. To run tests:
  
