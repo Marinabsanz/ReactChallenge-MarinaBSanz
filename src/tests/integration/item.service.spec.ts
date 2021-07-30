@@ -19,7 +19,7 @@ test('fetchItem should return item', async () => {
 });
 
 test('addItem should return items', async () => {
-    const items: Item[] = await ItemService.addItem("title", "description",);
+    const items: Item[] = await ItemService.addItem("title", "content", "image_url", "lat", );
     expect(items).toEqual(
         [
             {"description": "desc1", "id": 1548110629271, "title": "title1"},

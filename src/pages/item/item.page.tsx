@@ -27,7 +27,7 @@ export class ItemPage extends React.Component<Props> {
         this.props.fetchItem(this.props.match.params.id);
     }
     goHome() {
-        history.push("/App" );
+        history.push("/3001" );
     }
     render(){
         const show = !this.props.loading && !this.props.error && this.props.item;
@@ -37,12 +37,18 @@ export class ItemPage extends React.Component<Props> {
                 {this.props.error && <div>{this.props.error}</div> }
                 {show &&
                 <div>
-                  {/* <div>City number :{this.props.item.id}</div> */}
+                  
                   <div>City : {this.props.item.title}</div>
                   <div>{this.props.item.content}</div>
-                  <div> Lattitude: </div>
-                  <div> Image: </div> 
-                </div>
+                  <div>Lattitude:{this.props.item.lat}</div>
+                  <img
+                className="citypic"
+                src={this.props.item.image_url}
+                alt={this.props.item.title}
+              />
+            </div>
+                  
+               
                 
                 }
                 <button onClick={this.goHome}>Go back!</button>

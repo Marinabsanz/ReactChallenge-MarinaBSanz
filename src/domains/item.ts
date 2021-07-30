@@ -5,6 +5,8 @@ export class Item {
         public readonly id: string,
         public readonly title: string,
         public readonly content: string,
+        public readonly image_url: string,
+        public readonly lat: string,
       
         
     ) {}
@@ -14,6 +16,8 @@ export class Item {
             data.id,
             data.title,
             data.content,
+            data.image_url,
+            data.lat,
           
            
          

@@ -61,8 +61,8 @@ export function fetchItem(dispatch: Dispatch<IAction>, id: string): Promise<IAct
             }
         });
 }
-export function addItem(title: string, content: string ): Promise<IAction> {
-    return ItemService.addItem(title, content )
+export function addItem(title: string, content: string, image_url: string, lat:string, ): Promise<IAction> {
+    return ItemService.addItem(title, content , image_url , lat)
         .then((result: Item[])=> {
             return {
                 type: ADD_ITEM_SUCCESS,

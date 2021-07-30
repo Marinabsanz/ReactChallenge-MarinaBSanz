@@ -13,10 +13,12 @@ export class ItemService {
         const response = await axios.get(API +"/" + id);
         return response.data ? Item.FromBackend(response.data) : null;
     }
-    static async addItem(title: string, content: string  ): Promise<Item[]> {
+    static async addItem(title: string, content: string , image_url:string , lat: string): Promise<Item[]> {
         const response = await axios.post(API +"/", {
             title,
             content,
+            image_url,
+            lat,
            
             
             
