@@ -11,6 +11,7 @@ export interface ListPageSP {
 export interface ListPageDP {
     fetchItems: ()=>void,
     addItem: (title: string, content: string , image_url: string, lat:string)=>void
+    
 }
 interface Props extends ListPageDP, ListPageSP {}
 
@@ -54,6 +55,11 @@ export class ListPage extends React.Component<Props, State> {
         })
     }
  
+    changeImage(event: any) {
+        this.setState({
+            content: event.target.value
+        })
+    }
 
     addItem() {
         const {title, content, image_url, lat} = this.state
@@ -66,11 +72,11 @@ export class ListPage extends React.Component<Props, State> {
                 image_url: "",
                 lat: "",
                 
-                
-                
             })
         }
     }
+
+
     goToItem(id: string) {
         history.push(`/item/${id}` );
     }
@@ -88,14 +94,16 @@ export class ListPage extends React.Component<Props, State> {
                           return <li key={i} onClick={()=>this.goToItem(item.id)}>{item.title}</li>
                       })}
                   </ul>
-                  <div>
+                  <div className = "labelstyle_container">
                     Add a new city:
-                    <div>City name <input type="text" value={this.state.title} placeholder= "Example:Seville" onChange={this.changeTitle.bind(this)}/></div>
-                    <div>Description: <input type="text" value={this.state.content} placeholder= "Write about the city" onChange={this.changeDescription.bind(this)}/></div>
-                    <div>Lattitude: <input type="text" value={this.state.lat} placeholder= "..." onChange={this.changeLat.bind(this)}/></div>
-                    <button onClick={this.addItem.bind(this)}>add a new city!</button>
+                   
+                    <label>City name <input type="text" className = "labelstyle" value={this.state.title} placeholder= "Example:Seville" onChange={this.changeTitle.bind(this)}/></label>
+                    <label>Description: <input type="text" className = "labelstyle-description" value={this.state.content} placeholder= "Write about the city" onChange={this.changeDescription.bind(this)}/></label>
+                    <label>Lattitude: <input type="text" className = "labelstyle" value={this.state.lat} placeholder= "..." onChange={this.changeLat.bind(this)}/></label>
+                    <label>Insert url image: <input type="text" className = "labelstyle" value={this.state.image_url} placeholder= "..." onChange={this.changeImage.bind(this)}/></label>
+                    <button className = "button" onClick={this.addItem.bind(this)}>click here to add a new city!</button>
                   </div>
-                  
+                  <button className = "button-delete">Delete!</button>
                 </React.Fragment>
 
                 }

@@ -27,7 +27,7 @@ export class ItemPage extends React.Component<Props> {
         this.props.fetchItem(this.props.match.params.id);
     }
     goHome() {
-        history.push("/3001" );
+        history.push("/" );
     }
     render(){
         const show = !this.props.loading && !this.props.error && this.props.item;
@@ -51,7 +51,7 @@ export class ItemPage extends React.Component<Props> {
                
                 
                 }
-                <button onClick={this.goHome}>Go back!</button>
+                <button className= "button" onClick={this.goHome}>Go back!</button>
             </div>
         );
     }

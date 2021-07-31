@@ -6,10 +6,37 @@
 
 }
 
-
   .list-page li {
     cursor: pointer;
     text-decoration: none; 
     list-style: none;
     font-size: 1.5rem; }
 
+   .labelstyle {
+     color: rgb(43, 144, 226);
+     font-size: 1rem;
+    
+
+   }
+
+   .labelstyle_container {
+    color: rgb(43, 144, 226);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+
+
+
+
+   }
+
+   .labelstyle-description {
+    
+     width: fit-content;
+   }
+ 
+
+ .button-delete {
+
+  margin-top: 20px;
+ }
